@@ -1039,3 +1039,65 @@ a {
         }
     }
 }
+
+
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+#pricing {
+
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .card-container {
+        background-color: var(--bodyTextColorWhite);
+        display: flex;
+        gap: 30px;
+        padding: 39px 54px 36px 35px;
+        border-radius: 19px;
+    }
+
+    .card {
+        background-color: #fff;
+        padding: 51px 32px 53px 31px;
+        border-radius: 26px;
+    }
+
+    .topper {
+        color: #145FA4;
+    }
+
+    .card-price {
+        display: flex;
+        gap: 15px;
+        align-items: baseline;
+    }
+
+    .background-highlight {
+        background-color: var(--secondary);
+    }
+
+    .text-highlight_pricing {
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 1120px) {
+
+    #pricing {
+        .card-container {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+}
+

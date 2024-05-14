@@ -7,18 +7,157 @@
     object-fit: cover;
 }
 
+/*-- -------------------------- -->
+<---      salmon-overview       -->
+<--- -------------------------- -*/
+
 #salmon-overview{
 
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        gap: 2rem;
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+
+    
     .image-group {
         width: calc(730 / 16 * 1em);
         height: calc(561 / 16 * 1em);
 
+        .cs-picture {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         .cs-picture1 {
             width: calc(730 / 16 * 1em);
             height: calc(561 / 16 * 1em);
         }
     }
+
+    .text-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li {
+            list-style-position: inside;
+        }
+        li::marker {
+            color: var(--primary);
+        }
+    }
 }
+
+@media only screen and (min-width: 1024px) {
+
+    #salmon-overview {
+
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+#cta {
+    .cs-container {
+        background-color: var(--secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        padding: 65px 41px;
+        border-radius: 27px;
+    }
+
+    .image-group {
+        display: none;
+        position: relative;
+
+        width: calc(525 / 16 * 1em);
+        height: calc(364 / 16 * 1em);
+        clip-path: circle(90% at 86% 71%);     
+    }
+
+    .cs-picture {
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    }
+    .cs-picture1 {
+        width: calc(779 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        top: 0;
+        left: 0;
+    }
+
+
+    .text-content {
+        text-align: center;
+
+        .cs-sub-title {
+            font-size: 48px;
+        }
+        .cs-sub-title, .cs-text {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .button-solid {
+            margin-top: 43px;
+        }
+
+    }
+
+    
+    
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #cta {
+
+        .cs-container {
+            height: 364px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .text-content {
+            text-align: start;
+        }
+
+        .image-group {
+            display: block;     
+        }
+    }
+}
+
 
 
 #salmon-location{
